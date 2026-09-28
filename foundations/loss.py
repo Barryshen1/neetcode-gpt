@@ -23,3 +23,6 @@ class Solution:
         y_pred = np.clip(y_pred, epsilon, 1 - epsilon)
         loss = -np.mean(np.sum(y_true * np.log(y_pred), axis=1))
         return round(loss, 4)
+
+# Time complexity: O(NC), N is the number of the samples, C is the number of the class
+# Space complexity: O(NC) for intermediate arrays
